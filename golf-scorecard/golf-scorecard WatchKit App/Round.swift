@@ -21,19 +21,26 @@ class Round {
     }
     
     func reset() {
-        
+        self.scoreCard = Array(repeating: 0, count: holes)
+        self.hole = 0
     }
     
     func add() {
-        
+        scoreCard[hole] += 1
     }
     
     func nextHole() {
-        
+        hole += 1
+        if (hole >= holes) {
+            hole = 0
+        }
     }
     
     func previousHole() {
-        
+        hole -= 1
+        if (hole < 0) {
+            hole = holes - 1
+        }
     }
     
 }
