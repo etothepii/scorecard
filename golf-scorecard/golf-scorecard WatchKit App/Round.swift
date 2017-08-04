@@ -49,4 +49,12 @@ class Round {
         return self.scoreCard[self.hole]
     }
     
+    func totalScore() -> Int {
+        var total: Int = 0
+        for score in self.scoreCard {
+            total += score
+        }
+        return total
+    }
+    
 }
