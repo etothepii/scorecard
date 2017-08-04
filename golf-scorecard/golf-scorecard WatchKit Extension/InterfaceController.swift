@@ -40,11 +40,11 @@ class InterfaceController: WKInterfaceController {
         updateLabels()
     }
     @IBAction func swipeRight(_ sender: Any) {
-        round.nextHole()
+        round.previousHole()
         updateLabels()
     }
     @IBAction func swipeLeft(_ sender: Any) {
-        round.previousHole()
+        round.nextHole()
         updateLabels()
     }
     @IBOutlet var scoreLabel: WKInterfaceLabel!
