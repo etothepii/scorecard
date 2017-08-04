@@ -12,7 +12,7 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    var round = Round()
+    var round = Round(holes: 18)
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5826EFF01F342E0300D5059F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
 		5860607E1F34214C00734EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860607D1F34214C00734EF7 /* AppDelegate.swift */; };
 		586060801F34214C00734EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860607F1F34214C00734EF7 /* ViewController.swift */; };
 		586060831F34214C00734EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586060811F34214C00734EF7 /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		586060BD1F34214C00734EF7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060BC1F34214C00734EF7 /* NotificationController.swift */; };
 		586060BF1F34214C00734EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586060BE1F34214C00734EF7 /* Assets.xcassets */; };
 		586060D51F3423AC00734EF7 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
-		586060D71F34257E00734EF7 /* ScorecardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D61F34257E00734EF7 /* ScorecardInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,8 +107,7 @@
 		586060BC1F34214C00734EF7 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		586060BE1F34214C00734EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		586060C01F34214C00734EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		586060D41F3423AC00734EF7 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
-		586060D61F34257E00734EF7 /* ScorecardInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorecardInterfaceController.swift; sourceTree = "<group>"; };
+		586060D41F3423AC00734EF7 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Round.swift; path = "../golf-scorecard WatchKit App/Round.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +203,6 @@
 				586060A71F34214C00734EF7 /* Interface.storyboard */,
 				586060AA1F34214C00734EF7 /* Assets.xcassets */,
 				586060AC1F34214C00734EF7 /* Info.plist */,
-				586060D41F3423AC00734EF7 /* Round.swift */,
-				586060D61F34257E00734EF7 /* ScorecardInterfaceController.swift */,
 			);
 			path = "golf-scorecard WatchKit App";
 			sourceTree = "<group>";
@@ -213,6 +210,7 @@
 		586060B51F34214C00734EF7 /* golf-scorecard WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				586060D41F3423AC00734EF7 /* Round.swift */,
 				586060B81F34214C00734EF7 /* InterfaceController.swift */,
 				586060BA1F34214C00734EF7 /* ExtensionDelegate.swift */,
 				586060BC1F34214C00734EF7 /* NotificationController.swift */,
@@ -433,7 +431,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				586060D71F34257E00734EF7 /* ScorecardInterfaceController.swift in Sources */,
 				586060801F34214C00734EF7 /* ViewController.swift in Sources */,
 				586060D51F3423AC00734EF7 /* Round.swift in Sources */,
 				5860607E1F34214C00734EF7 /* AppDelegate.swift in Sources */,
@@ -462,6 +459,7 @@
 			files = (
 				586060BD1F34214C00734EF7 /* NotificationController.swift in Sources */,
 				586060BB1F34214C00734EF7 /* ExtensionDelegate.swift in Sources */,
+				5826EFF01F342E0300D5059F /* Round.swift in Sources */,
 				586060B91F34214C00734EF7 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -785,6 +783,7 @@
 				586060C51F34214C00734EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		586060C71F34214C00734EF7 /* Build configuration list for PBXNativeTarget "golf-scorecard WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -793,6 +792,7 @@
 				586060C91F34214C00734EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		586060CB1F34214C00734EF7 /* Build configuration list for PBXNativeTarget "golf-scorecard" */ = {
 			isa = XCConfigurationList;
@@ -801,6 +801,7 @@
 				586060CD1F34214C00734EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		586060CE1F34214C00734EF7 /* Build configuration list for PBXNativeTarget "golf-scorecardTests" */ = {
 			isa = XCConfigurationList;
@@ -809,6 +810,7 @@
 				586060D01F34214C00734EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		586060D11F34214C00734EF7 /* Build configuration list for PBXNativeTarget "golf-scorecardUITests" */ = {
 			isa = XCConfigurationList;
@@ -817,6 +819,7 @@
 				586060D31F34214C00734EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
