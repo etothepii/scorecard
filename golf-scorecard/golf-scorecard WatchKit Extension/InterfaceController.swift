@@ -31,14 +31,25 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func longPress(_ sender: Any) {
+        round.reset()
+        updateLabels()
     }
     @IBAction func tap(_ sender: Any) {
+        round.add()
+        updateLabels()
     }
     @IBAction func swipeRight(_ sender: Any) {
-        
+        round.nextHole()
+        updateLabels()
     }
     @IBAction func swipeLeft(_ sender: Any) {
+        round.previousHole()
+        updateLabels()
     }
     @IBOutlet var scoreLabel: WKInterfaceLabel!
     @IBOutlet var holeLabel: WKInterfaceLabel!
+    
+    func updateLabels() {
+        
+    }
 }

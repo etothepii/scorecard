@@ -20,4 +20,20 @@ class Round {
         self.hole = 0
     }
     
+    func reset() {
+        
+    }
+    
+    func add() {
+        
+    }
+    
+    func nextHole() {
+        
+    }
+    
+    func previousHole() {
+        
+    }
+    
 }
