@@ -28,4 +28,14 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func longPress(_ sender: Any) {
+    }
+    @IBAction func tap(_ sender: Any) {
+    }
+    @IBAction func swipeRight(_ sender: Any) {
+    }
+    @IBAction func swipeLeft(_ sender: Any) {
+    }
+    @IBOutlet var scoreLabel: WKInterfaceLabel!
+    @IBOutlet var holeLabel: WKInterfaceLabel!
 }

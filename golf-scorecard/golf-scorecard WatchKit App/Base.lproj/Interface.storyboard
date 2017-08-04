@@ -17,17 +17,38 @@
                         <group width="1" height="1" alignment="left" layout="vertical" id="WtM-Ib-PYu">
                             <items>
                                 <label width="136" alignment="left" text="Hole 1" id="XT7-mc-Isb"/>
-                                <label width="136" height="223" alignment="left" text="88" textAlignment="center" id="eIT-4B-pvZ">
+                                <label width="136" height="223" alignment="left" text="88" textAlignment="center" id="eIT-4B-pvZ" userLabel="Score Label">
                                     <fontDescription key="font" type="system" pointSize="118"/>
                                 </label>
                             </items>
                             <gestureRecognizers>
-                                <longPressGestureRecognizer id="pEL-KO-J0J"/>
-                                <tapGestureRecognizer id="ZFw-1g-MBI"/>
-                                <swipeGestureRecognizer id="gLP-36-1yQ"/>
+                                <longPressGestureRecognizer id="pEL-KO-J0J">
+                                    <connections>
+                                        <action selector="longPress:" destination="AgC-eL-Hgc" id="iGe-gg-suP"/>
+                                    </connections>
+                                </longPressGestureRecognizer>
+                                <tapGestureRecognizer id="ZFw-1g-MBI">
+                                    <connections>
+                                        <action selector="tap:" destination="AgC-eL-Hgc" id="YVi-Lz-10d"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                                <swipeGestureRecognizer id="gLP-36-1yQ">
+                                    <connections>
+                                        <action selector="swipeRight:" destination="AgC-eL-Hgc" id="97j-Sy-0tY"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="jgW-bz-34M">
+                                    <connections>
+                                        <action selector="swipeLeft:" destination="AgC-eL-Hgc" id="6bI-I0-MKn"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
                             </gestureRecognizers>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="holeLabel" destination="XT7-mc-Isb" id="zVQ-gx-yvO"/>
+                        <outlet property="scoreLabel" destination="eIT-4B-pvZ" id="AHj-Rj-kDz"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
