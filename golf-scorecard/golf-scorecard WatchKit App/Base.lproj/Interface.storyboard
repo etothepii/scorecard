@@ -14,14 +14,19 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="golf_scorecard_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" alignment="left" text="Label" id="Iys-Al-YzC"/>
-                        <imageView height="126" alignment="left" id="s9K-Q6-1Bp">
+                        <group width="1" height="1" alignment="left" layout="vertical" id="WtM-Ib-PYu">
+                            <items>
+                                <label width="136" alignment="left" text="Hole 1" id="XT7-mc-Isb"/>
+                                <label width="136" height="223" alignment="left" text="88" textAlignment="center" id="eIT-4B-pvZ">
+                                    <fontDescription key="font" type="system" pointSize="118"/>
+                                </label>
+                            </items>
                             <gestureRecognizers>
-                                <tapGestureRecognizer id="CTY-X0-2kP"/>
-                                <swipeGestureRecognizer id="Rtf-mL-dVh"/>
-                                <longPressGestureRecognizer id="yla-xb-Uzk"/>
+                                <longPressGestureRecognizer id="pEL-KO-J0J"/>
+                                <tapGestureRecognizer id="ZFw-1g-MBI"/>
+                                <swipeGestureRecognizer id="gLP-36-1yQ"/>
                             </gestureRecognizers>
-                        </imageView>
+                        </group>
                     </items>
                 </controller>
             </objects>
