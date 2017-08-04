@@ -43,4 +43,8 @@ class Round {
         }
     }
     
+    func currentScore() -> Int {
+        return self.scoreCard[self.hole]
+    }
+    
 }

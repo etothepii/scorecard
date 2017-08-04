@@ -23,6 +23,7 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        updateLabels()
     }
     
     override func didDeactivate() {
@@ -50,6 +51,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var holeLabel: WKInterfaceLabel!
     
     func updateLabels() {
-        
+        holeLabel.setText("Hole \(round.hole + 1)")
+        scoreLabel.setText("\(round.currentScore())")
     }
 }
