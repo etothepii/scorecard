@@ -13,11 +13,13 @@ class Round {
     var holes: Int
     var scoreCard: [Int]
     var hole: Int
+    var startTime: Date
     
     init(holes: Int) {
         self.holes = holes
         self.scoreCard = Array(repeating: 0, count: holes)
         self.hole = 0
+        startTime = Date()
     }
     
     func reset() {
