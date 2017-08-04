@@ -12,7 +12,14 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    var round = Round(holes: 18)
+    var round: Round
+    var rounds: [Round]
+    
+    override init() {
+        self.round = Round(holes: 18)
+        self.rounds = [round]
+        super.init()
+    }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -32,7 +39,8 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func longPress(_ sender: Any) {
-        round.reset()
+        round = Round(holes: 18)
+        rounds += [round]
         updateLabels()
     }
     @IBAction func tap(_ sender: Any) {
