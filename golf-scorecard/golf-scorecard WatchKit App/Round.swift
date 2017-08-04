@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class Round {
+    
+    var holes: Int
+    var scoreCard: [Int]
+    var hole: Int
+    
+    init(holes: Int) {
+        self.holes = holes
+        self.scoreCard = Array(repeating: 0, count: holes)
+        self.hole = 0
+    }
+    
+}

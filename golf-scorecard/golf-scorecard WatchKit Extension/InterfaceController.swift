@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    var round = Round()
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -33,6 +35,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func tap(_ sender: Any) {
     }
     @IBAction func swipeRight(_ sender: Any) {
+        
     }
     @IBAction func swipeLeft(_ sender: Any) {
     }
