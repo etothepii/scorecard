@@ -11,24 +11,39 @@ import Foundation
 class Round {
     
     var holes: Int
-    var scoreCard: [Int]
+    var scoreCard: [HoleScore]
     var hole: Int
     var startTime: Date
     
     init(holes: Int) {
         self.holes = holes
-        self.scoreCard = Array(repeating: 0, count: holes)
+        self.scoreCard = [HoleScore]()
+        for _ in 0..<holes {
+            self.scoreCard += [HoleScore()]
+        }
         self.hole = 0
         startTime = Date()
     }
     
     func reset() {
-        self.scoreCard = Array(repeating: 0, count: holes)
+        self.scoreCard = [HoleScore]()
+        for _ in 0..<holes {
+            self.scoreCard += [HoleScore()]
+        }
         self.hole = 0
     }
     
-    func add() {
-        scoreCard[hole] += 1
+    func addStroke() {
+        scoreCard[hole].addStroke()
+    }
+    
+    func landOnGreen() {
+        scoreCard[hole].landOnGreen()
+    }
+    
+    func completeHole() {
+        scoreCard[hole].completeHole()
+        nextHole()
     }
     
     func nextHole() {
@@ -36,6 +51,10 @@ class Round {
         if (hole >= holes) {
             hole = 0
         }
+    }
+    
+    func landedOnGreen() -> Bool {
+        return scoreCard[hole].landedOnGreen
     }
     
     func previousHole() {
@@ -46,13 +65,13 @@ class Round {
     }
     
     func currentScore() -> Int {
-        return self.scoreCard[self.hole]
+        return self.scoreCard[self.hole].totalStrokes()
     }
     
     func totalScore() -> Int {
         var total: Int = 0
         for score in self.scoreCard {
-            total += score
+            total += score.totalStrokes()
         }
         return total
     }

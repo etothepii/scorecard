@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -16,37 +16,31 @@
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="WtM-Ib-PYu">
                             <items>
-                                <label width="136" alignment="left" text="Hole 1" id="XT7-mc-Isb"/>
-                                <label width="136" height="223" alignment="left" text="88" textAlignment="center" id="eIT-4B-pvZ" userLabel="Score Label">
+                                <label width="1" height="0.75" alignment="left" text="88" textAlignment="center" id="eIT-4B-pvZ" userLabel="Score Label">
+                                    <gestureRecognizers>
+                                        <longPressGestureRecognizer minimumPressDuration="5" id="pEL-KO-J0J">
+                                            <connections>
+                                                <action selector="longPress:" destination="AgC-eL-Hgc" id="iGe-gg-suP"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                        <tapGestureRecognizer id="ZFw-1g-MBI">
+                                            <connections>
+                                                <action selector="tap:" destination="AgC-eL-Hgc" id="YVi-Lz-10d"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
                                     <fontDescription key="font" type="system" pointSize="118"/>
                                 </label>
+                                <button width="1" height="0.25" alignment="left" title="Button" id="zHW-o5-ghf">
+                                    <connections>
+                                        <action selector="buttonClicked" destination="AgC-eL-Hgc" id="zHx-gD-fi6"/>
+                                    </connections>
+                                </button>
                             </items>
-                            <gestureRecognizers>
-                                <longPressGestureRecognizer id="pEL-KO-J0J">
-                                    <connections>
-                                        <action selector="longPress:" destination="AgC-eL-Hgc" id="iGe-gg-suP"/>
-                                    </connections>
-                                </longPressGestureRecognizer>
-                                <tapGestureRecognizer id="ZFw-1g-MBI">
-                                    <connections>
-                                        <action selector="tap:" destination="AgC-eL-Hgc" id="YVi-Lz-10d"/>
-                                    </connections>
-                                </tapGestureRecognizer>
-                                <swipeGestureRecognizer id="gLP-36-1yQ">
-                                    <connections>
-                                        <action selector="swipeRight:" destination="AgC-eL-Hgc" id="97j-Sy-0tY"/>
-                                    </connections>
-                                </swipeGestureRecognizer>
-                                <swipeGestureRecognizer direction="2" id="jgW-bz-34M">
-                                    <connections>
-                                        <action selector="swipeLeft:" destination="AgC-eL-Hgc" id="6bI-I0-MKn"/>
-                                    </connections>
-                                </swipeGestureRecognizer>
-                            </gestureRecognizers>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="holeLabel" destination="XT7-mc-Isb" id="zVQ-gx-yvO"/>
+                        <outlet property="button" destination="zHW-o5-ghf" id="3tU-pD-UoR"/>
                         <outlet property="scoreLabel" destination="eIT-4B-pvZ" id="AHj-Rj-kDz"/>
                     </connections>
                 </controller>

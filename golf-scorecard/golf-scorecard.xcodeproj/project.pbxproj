@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5826EFF01F342E0300D5059F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
 		5826EFF11F3435D500D5059F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
+		582EDCAA1F3552D600823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
+		582EDCAB1F3552D700823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
+		582EDCAC1F3552DD00823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
+		582EDCAE1F3555D200823C50 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCAD1F3555D200823C50 /* Course.swift */; };
+		582EDCB01F35565500823C50 /* HoleScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCAF1F35565500823C50 /* HoleScore.swift */; };
 		5860607E1F34214C00734EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860607D1F34214C00734EF7 /* AppDelegate.swift */; };
 		586060801F34214C00734EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860607F1F34214C00734EF7 /* ViewController.swift */; };
 		586060831F34214C00734EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586060811F34214C00734EF7 /* Main.storyboard */; };
@@ -25,6 +30,7 @@
 		586060BD1F34214C00734EF7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060BC1F34214C00734EF7 /* NotificationController.swift */; };
 		586060BF1F34214C00734EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586060BE1F34214C00734EF7 /* Assets.xcassets */; };
 		586060D51F3423AC00734EF7 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
+		58E88DA71F36B4F4001C7DF9 /* HoleScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCAF1F35565500823C50 /* HoleScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +90,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		582EDCA81F3552CD00823C50 /* Hole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hole.swift; path = "golf-scorecard/Hole.swift"; sourceTree = SOURCE_ROOT; };
+		582EDCAD1F3555D200823C50 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		582EDCAF1F35565500823C50 /* HoleScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleScore.swift; sourceTree = "<group>"; };
 		5860607A1F34214C00734EF7 /* golf-scorecard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "golf-scorecard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5860607D1F34214C00734EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5860607F1F34214C00734EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +179,7 @@
 		5860607C1F34214C00734EF7 /* golf-scorecard */ = {
 			isa = PBXGroup;
 			children = (
+				582EDCA81F3552CD00823C50 /* Hole.swift */,
 				5860607D1F34214C00734EF7 /* AppDelegate.swift */,
 				586060D41F3423AC00734EF7 /* Round.swift */,
 				5860607F1F34214C00734EF7 /* ViewController.swift */,
@@ -177,6 +187,8 @@
 				586060841F34214C00734EF7 /* Assets.xcassets */,
 				586060861F34214C00734EF7 /* LaunchScreen.storyboard */,
 				586060891F34214C00734EF7 /* Info.plist */,
+				582EDCAD1F3555D200823C50 /* Course.swift */,
+				582EDCAF1F35565500823C50 /* HoleScore.swift */,
 			);
 			path = "golf-scorecard";
 			sourceTree = "<group>";
@@ -432,7 +444,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582EDCB01F35565500823C50 /* HoleScore.swift in Sources */,
 				586060801F34214C00734EF7 /* ViewController.swift in Sources */,
+				582EDCAA1F3552D600823C50 /* Hole.swift in Sources */,
+				582EDCAE1F3555D200823C50 /* Course.swift in Sources */,
 				586060D51F3423AC00734EF7 /* Round.swift in Sources */,
 				5860607E1F34214C00734EF7 /* AppDelegate.swift in Sources */,
 			);
@@ -443,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5826EFF11F3435D500D5059F /* Round.swift in Sources */,
+				582EDCAB1F3552D700823C50 /* Hole.swift in Sources */,
 				586060931F34214C00734EF7 /* golf_scorecardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,8 +475,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E88DA71F36B4F4001C7DF9 /* HoleScore.swift in Sources */,
 				586060BD1F34214C00734EF7 /* NotificationController.swift in Sources */,
 				586060BB1F34214C00734EF7 /* ExtensionDelegate.swift in Sources */,
+				582EDCAC1F3552DD00823C50 /* Hole.swift in Sources */,
 				5826EFF01F342E0300D5059F /* Round.swift in Sources */,
 				586060B91F34214C00734EF7 /* InterfaceController.swift in Sources */,
 			);

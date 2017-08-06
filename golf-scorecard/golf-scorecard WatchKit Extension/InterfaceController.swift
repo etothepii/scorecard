@@ -44,22 +44,30 @@ class InterfaceController: WKInterfaceController {
         updateLabels()
     }
     @IBAction func tap(_ sender: Any) {
-        round.add()
+        round.addStroke()
         updateLabels()
     }
-    @IBAction func swipeRight(_ sender: Any) {
-        round.previousHole()
+    @IBAction func buttonClicked() {
+        if (self.round.landedOnGreen()) {
+            round.completeHole()
+        }
+        else {
+            round.landOnGreen()
+        }
         updateLabels()
     }
-    @IBAction func swipeLeft(_ sender: Any) {
-        round.nextHole()
-        updateLabels()
-    }
+    
     @IBOutlet var scoreLabel: WKInterfaceLabel!
-    @IBOutlet var holeLabel: WKInterfaceLabel!
+    @IBOutlet var button: WKInterfaceButton!
     
     func updateLabels() {
-        holeLabel.setText("Hole \(round.hole + 1)")
+        self.setTitle("Hole \(round.hole + 1)")
         scoreLabel.setText("\(round.currentScore())")
+        if (self.round.landedOnGreen()) {
+            self.button.setTitle("In Hole")
+        }
+        else {
+            self.button.setTitle("On Green")
+        }
     }
 }
