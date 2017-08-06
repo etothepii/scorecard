@@ -10,12 +10,14 @@ import UIKit
 
 class HoleScore {
     
+    var hole: Hole
     var strokesToGreen: Int
     var strokesOnGreen: Int
     var landedOnGreen: Bool
     var completed: Bool
     
-    init() {
+    init(hole: Hole) {
+        self.hole = hole
         self.strokesToGreen = 0
         self.strokesOnGreen = 0
         self.landedOnGreen = false

@@ -18,8 +18,8 @@ class Round {
     init(holes: Int) {
         self.holes = holes
         self.scoreCard = [HoleScore]()
-        for _ in 0..<holes {
-            self.scoreCard += [HoleScore()]
+        for holeIndex in 0..<holes {
+            self.scoreCard += [HoleScore(hole: Hole(number: holeIndex + 1, name: "Hole \(holeIndex + 1)"))]
         }
         self.hole = 0
         startTime = Date()
@@ -27,10 +27,14 @@ class Round {
     
     func reset() {
         self.scoreCard = [HoleScore]()
-        for _ in 0..<holes {
-            self.scoreCard += [HoleScore()]
+        for holeIndex in 0..<holes {
+            self.scoreCard += [HoleScore(hole: Hole(number: holeIndex + 1, name: "Hole \(holeIndex + 1)"))]
         }
         self.hole = 0
+    }
+    
+    func completedHole() -> Bool {
+        return self.scoreCard[hole].completed
     }
     
     func addStroke() {

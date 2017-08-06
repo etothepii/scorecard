@@ -30,6 +30,8 @@
 		586060BD1F34214C00734EF7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060BC1F34214C00734EF7 /* NotificationController.swift */; };
 		586060BF1F34214C00734EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586060BE1F34214C00734EF7 /* Assets.xcassets */; };
 		586060D51F3423AC00734EF7 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
+		5893570B1F37CB3E0054015F /* HoleSummaryTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893570A1F37CB3E0054015F /* HoleSummaryTableRowController.swift */; };
+		5893570D1F37CC9B0054015F /* RoundSummaryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5893570C1F37CC9B0054015F /* RoundSummaryTableController.swift */; };
 		58E88DA71F36B4F4001C7DF9 /* HoleScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCAF1F35565500823C50 /* HoleScore.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +120,8 @@
 		586060BE1F34214C00734EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		586060C01F34214C00734EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586060D41F3423AC00734EF7 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Round.swift; path = "golf-scorecard WatchKit App/Round.swift"; sourceTree = SOURCE_ROOT; };
+		5893570A1F37CB3E0054015F /* HoleSummaryTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleSummaryTableRowController.swift; sourceTree = "<group>"; };
+		5893570C1F37CC9B0054015F /* RoundSummaryTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundSummaryTableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,8 @@
 				586060A71F34214C00734EF7 /* Interface.storyboard */,
 				586060AA1F34214C00734EF7 /* Assets.xcassets */,
 				586060AC1F34214C00734EF7 /* Info.plist */,
+				5893570A1F37CB3E0054015F /* HoleSummaryTableRowController.swift */,
+				5893570C1F37CC9B0054015F /* RoundSummaryTableController.swift */,
 			);
 			path = "golf-scorecard WatchKit App";
 			sourceTree = "<group>";
@@ -446,10 +452,12 @@
 			files = (
 				582EDCB01F35565500823C50 /* HoleScore.swift in Sources */,
 				586060801F34214C00734EF7 /* ViewController.swift in Sources */,
+				5893570D1F37CC9B0054015F /* RoundSummaryTableController.swift in Sources */,
 				582EDCAA1F3552D600823C50 /* Hole.swift in Sources */,
 				582EDCAE1F3555D200823C50 /* Course.swift in Sources */,
 				586060D51F3423AC00734EF7 /* Round.swift in Sources */,
 				5860607E1F34214C00734EF7 /* AppDelegate.swift in Sources */,
+				5893570B1F37CB3E0054015F /* HoleSummaryTableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

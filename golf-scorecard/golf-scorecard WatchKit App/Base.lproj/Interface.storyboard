@@ -63,6 +63,39 @@
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
         </scene>
+        <!--Round Summary Table Controller-->
+        <scene sceneID="18C-US-NVz">
+            <objects>
+                <controller id="M14-bF-zCt" customClass="RoundSummaryTableController" customModule="golf_scorecard">
+                    <items>
+                        <table alignment="left" id="oow-WE-Lrc">
+                            <items>
+                                <tableRow id="gIf-lJ-mWa" customClass="HoleSummaryTableRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="vjF-oH-hb0">
+                                        <items>
+                                            <label width="0.25" height="43" alignment="left" text="1" textAlignment="center" id="8DR-Sv-7de" userLabel="Name"/>
+                                            <label width="0.25" height="1" alignment="left" text="4" textAlignment="center" id="5eb-HX-b5Q" userLabel="Through"/>
+                                            <label width="0.25" height="1" alignment="left" text="2" textAlignment="center" id="tZa-yp-0by" userLabel="Green"/>
+                                            <label width="0.25" height="1" alignment="left" text="6" textAlignment="center" id="fEE-Cy-bei" userLabel="Total">
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="name" destination="8DR-Sv-7de" id="9we-d0-yC4"/>
+                                        <outlet property="onGreen" destination="tZa-yp-0by" id="GBi-Zy-FRm"/>
+                                        <outlet property="throughGreen" destination="5eb-HX-b5Q" id="CGc-fO-jxr"/>
+                                        <outlet property="totalStrokes" destination="fEE-Cy-bei" id="gum-k0-lIB"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
