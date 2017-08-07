@@ -33,7 +33,7 @@ class RoundSummaryTableController: WKInterfaceController {
                     row.setHoleScore(holeScore: round.scoreCard[holeIndex])
                 }
             }
-            self.setTitle("Score \(round.totalScore())")
+            self.setTitle("Score: \(round.totalScore())")
         }
         super.willActivate()
     }
