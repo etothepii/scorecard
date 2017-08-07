@@ -47,7 +47,10 @@ class Round {
     
     func completeHole() {
         scoreCard[hole].completeHole()
-        nextHole()
+    }
+    
+    func lastHole() -> Bool {
+        return self.hole == self.holes - 1
     }
     
     func nextHole() {

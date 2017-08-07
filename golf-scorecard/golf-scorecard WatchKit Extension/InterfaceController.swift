@@ -71,7 +71,13 @@ class InterfaceController: WKInterfaceController {
         self.setTitle("Hole \(round.hole + 1)")
         scoreLabel.setText("\(round.currentScore())")
         if (self.round.completedHole()) {
-            self.button.setTitle("Next Hole")
+            if (round.lastHole()) {
+                
+                self.button.setTitle("Round Summary")
+        }
+            else {
+                self.button.setTitle("Next Hole")
+            }
         }
         else {
             if (self.round.landedOnGreen()) {
