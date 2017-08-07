@@ -10,4 +10,31 @@ import WatchKit
 
 class RoundSummaryTableController: WKInterfaceController {
     
+    @IBOutlet var roundSummaryTable: WKInterfaceTable!
+    var round: Round?
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        guard let round = context as? Round else {
+            return
+        }
+        setRound(round: round)
+    }
+    
+    func setRound(round: Round) {
+        self.round = round
+        roundSummaryTable.setNumberOfRows(round.holes, withRowType: "summaryRow")
+    }
+    
+    override func willActivate() {
+        if let round = round {
+            for holeIndex in 0..<round.holes {
+                if let row = roundSummaryTable.rowController(at: holeIndex) as? HoleSummaryTableRowController {
+                    row.setHoleScore(holeScore: round.scoreCard[holeIndex])
+                }
+            }
+            self.setTitle("Score \(round.totalScore())")
+        }
+        super.willActivate()
+    }
 }

@@ -16,7 +16,7 @@ class HoleSummaryTableRowController: NSObject {
     @IBOutlet var totalStrokes: WKInterfaceLabel!
     
     func setHoleScore(holeScore: HoleScore) {
-        name.setText("\(holeScore.hole.number)")
+        name.setText("\(holeScore.hole.number):")
         throughGreen.setText("\(holeScore.strokesToGreen)")
         onGreen.setText("\(holeScore.strokesOnGreen)")
         totalStrokes.setText("\(holeScore.totalStrokes())")

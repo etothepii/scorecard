@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--main-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="golf_scorecard_WatchKit_App" customModuleProvider="target">
+                <controller identifier="main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="golf_scorecard_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="WtM-Ib-PYu">
                             <items>
@@ -42,6 +42,7 @@
                     <connections>
                         <outlet property="button" destination="zHW-o5-ghf" id="3tU-pD-UoR"/>
                         <outlet property="scoreLabel" destination="eIT-4B-pvZ" id="AHj-Rj-kDz"/>
+                        <segue destination="M14-bF-zCt" kind="relationship" relationship="nextPage" id="Ty7-BG-1VX"/>
                     </connections>
                 </controller>
             </objects>
@@ -63,17 +64,17 @@
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
         </scene>
-        <!--Round Summary Table Controller-->
+        <!--summary-->
         <scene sceneID="18C-US-NVz">
             <objects>
-                <controller id="M14-bF-zCt" customClass="RoundSummaryTableController" customModule="golf_scorecard">
+                <controller identifier="summary" id="M14-bF-zCt" customClass="RoundSummaryTableController" customModule="golf_scorecard_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="oow-WE-Lrc">
                             <items>
-                                <tableRow id="gIf-lJ-mWa" customClass="HoleSummaryTableRowController">
+                                <tableRow identifier="summaryRow" id="gIf-lJ-mWa" customClass="HoleSummaryTableRowController" customModule="golf_scorecard_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="vjF-oH-hb0">
                                         <items>
-                                            <label width="0.25" height="43" alignment="left" text="1" textAlignment="center" id="8DR-Sv-7de" userLabel="Name"/>
+                                            <label width="0.25" height="43" alignment="left" text="1:" textAlignment="right" id="8DR-Sv-7de" userLabel="Name"/>
                                             <label width="0.25" height="1" alignment="left" text="4" textAlignment="center" id="5eb-HX-b5Q" userLabel="Through"/>
                                             <label width="0.25" height="1" alignment="left" text="2" textAlignment="center" id="tZa-yp-0by" userLabel="Green"/>
                                             <label width="0.25" height="1" alignment="left" text="6" textAlignment="center" id="fEE-Cy-bei" userLabel="Total">
@@ -92,9 +93,12 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="roundSummaryTable" destination="oow-WE-Lrc" id="oYX-Is-MYN"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="857" y="277"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">

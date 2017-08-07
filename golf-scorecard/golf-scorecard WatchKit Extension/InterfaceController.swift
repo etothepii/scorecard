@@ -12,19 +12,18 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    var round: Round
-    var rounds: [Round]
+    var round: Round?
     
     override init() {
-        self.round = Round(holes: 18)
-        self.rounds = [round]
+        self.round = nil
         super.init()
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+        if let round = context as? Round {
+            self.round = round
+        }
     }
     
     override func willActivate() {
@@ -37,28 +36,31 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        return round
+    }
+    
     @IBAction func longPress(_ sender: Any) {
-        round = Round(holes: 18)
-        rounds += [round]
+        round!.reset()
         updateLabels()
     }
     @IBAction func tap(_ sender: Any) {
-        if (!self.round.completedHole()) {
-            round.addStroke()
+        if (!self.round!.completedHole()) {
+            round!.addStroke()
             updateLabels()
         }
     }
     @IBAction func buttonClicked() {
-        if (self.round.completedHole()) {
-            round.nextHole()
+        if (self.round!.completedHole()) {
+            round!.nextHole()
         }
         else {
-            if (self.round.landedOnGreen()) {
-                round.completeHole()
+            if (self.round!.landedOnGreen()) {
+                round!.completeHole()
             }
             else {
-                round.landOnGreen()
+                round!.landOnGreen()
             }
         }
         updateLabels()
@@ -68,19 +70,16 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var button: WKInterfaceButton!
     
     func updateLabels() {
+        guard let round = self.round else {
+            return
+        }
         self.setTitle("Hole \(round.hole + 1)")
         scoreLabel.setText("\(round.currentScore())")
-        if (self.round.completedHole()) {
-            if (round.lastHole()) {
-                
-                self.button.setTitle("Round Summary")
-        }
-            else {
-                self.button.setTitle("Next Hole")
-            }
+        if (round.completedHole()) {
+            self.button.setTitle("Next Hole")
         }
         else {
-            if (self.round.landedOnGreen()) {
+            if (round.landedOnGreen()) {
                 self.button.setTitle("In Hole")
             }
             else {
