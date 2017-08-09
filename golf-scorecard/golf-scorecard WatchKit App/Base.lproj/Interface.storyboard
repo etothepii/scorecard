@@ -92,6 +92,11 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="New Round" id="bTa-Uv-0zF">
+                            <connections>
+                                <action selector="newRound" destination="M14-bF-zCt" id="Xwl-jH-oYV"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="roundSummaryTable" destination="oow-WE-Lrc" id="oYX-Is-MYN"/>

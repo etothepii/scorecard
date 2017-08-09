@@ -21,6 +21,11 @@ class RoundSummaryTableController: WKInterfaceController {
         setRound(round: round)
     }
     
+    @IBAction func newRound() {
+        if let round = round {
+            round.reset()
+        }
+    }
     func setRound(round: Round) {
         self.round = round
         roundSummaryTable.setNumberOfRows(round.holes, withRowType: "summaryRow")
