@@ -41,6 +41,10 @@ class Round {
         scoreCard[hole].addStroke()
     }
     
+    func removeStroke() {
+        scoreCard[hole].removeStroke()
+    }
+    
     func landOnGreen() {
         scoreCard[hole].landOnGreen()
     }

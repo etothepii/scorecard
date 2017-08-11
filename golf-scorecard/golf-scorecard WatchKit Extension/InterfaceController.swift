@@ -42,7 +42,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func longPress(_ sender: Any) {
-        round!.reset()
+        round!.removeStroke()
         updateLabels()
     }
     @IBAction func tap(_ sender: Any) {

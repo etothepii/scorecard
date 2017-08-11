@@ -37,6 +37,18 @@ class HoleScore {
         }
     }
     
+    func removeStroke() {
+        if (strokesOnGreen > 0) {
+            strokesOnGreen -= 1
+        }
+        else if (strokesOnGreen == 0 && landedOnGreen) {
+            landedOnGreen = false
+        }
+        else {
+            strokesToGreen -= 1
+        }
+    }
+    
     func completeHole() {
         completed = true
     }

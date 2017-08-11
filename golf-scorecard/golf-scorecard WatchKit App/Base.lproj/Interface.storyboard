@@ -18,7 +18,7 @@
                             <items>
                                 <label width="1" height="0.75" alignment="left" text="88" textAlignment="center" id="eIT-4B-pvZ" userLabel="Score Label">
                                     <gestureRecognizers>
-                                        <longPressGestureRecognizer minimumPressDuration="5" id="pEL-KO-J0J">
+                                        <longPressGestureRecognizer minimumPressDuration="1" id="pEL-KO-J0J">
                                             <connections>
                                                 <action selector="longPress:" destination="AgC-eL-Hgc" id="iGe-gg-suP"/>
                                             </connections>
