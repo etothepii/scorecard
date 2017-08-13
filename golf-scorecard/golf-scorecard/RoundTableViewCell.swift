@@ -17,8 +17,10 @@ class RoundTableViewCell: UITableViewCell {
     
     @IBOutlet var name: UILabel!
     @IBOutlet var score: UILabel!
+    var round: Round?
 
     func setRound(round: Round) {
+        self.round = round
         name.text = round.name
         score.text = "\(round.totalScore())"
     }
