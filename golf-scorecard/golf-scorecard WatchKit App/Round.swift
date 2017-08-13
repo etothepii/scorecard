@@ -14,13 +14,8 @@ class Round {
     var scoreCard: [HoleScore]
     var hole: Int
     var startTime: Date
-    var name: String
     
     init(holes: Int) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = DateFormatter.Style.full
-        dateFormatter.timeStyle = DateFormatter.Style.short
-        name = dateFormatter.string(from: Date())
         self.holes = holes
         self.scoreCard = [HoleScore]()
         for holeIndex in 0..<holes {
