@@ -11,7 +11,6 @@
 		5826EFF11F3435D500D5059F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
 		5828749F1F410707008D2460 /* HoleScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5828749E1F410707008D2460 /* HoleScoreTableViewCell.swift */; };
 		582874A11F4108C4008D2460 /* RoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582874A01F4108C4008D2460 /* RoundTableViewController.swift */; };
-		582874A31F410989008D2460 /* RoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582874A21F410989008D2460 /* RoundTableViewCell.swift */; };
 		582EDCAA1F3552D600823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
 		582EDCAB1F3552D700823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
 		582EDCAC1F3552DD00823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
@@ -97,7 +96,6 @@
 /* Begin PBXFileReference section */
 		5828749E1F410707008D2460 /* HoleScoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleScoreTableViewCell.swift; sourceTree = "<group>"; };
 		582874A01F4108C4008D2460 /* RoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTableViewController.swift; sourceTree = "<group>"; };
-		582874A21F410989008D2460 /* RoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTableViewCell.swift; sourceTree = "<group>"; };
 		582EDCA81F3552CD00823C50 /* Hole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hole.swift; path = "golf-scorecard/Hole.swift"; sourceTree = SOURCE_ROOT; };
 		582EDCAD1F3555D200823C50 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		582EDCAF1F35565500823C50 /* HoleScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleScore.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 				582EDCAF1F35565500823C50 /* HoleScore.swift */,
 				5828749E1F410707008D2460 /* HoleScoreTableViewCell.swift */,
 				582874A01F4108C4008D2460 /* RoundTableViewController.swift */,
-				582874A21F410989008D2460 /* RoundTableViewCell.swift */,
 			);
 			path = "golf-scorecard";
 			sourceTree = "<group>";
@@ -461,7 +458,6 @@
 			files = (
 				582874A11F4108C4008D2460 /* RoundTableViewController.swift in Sources */,
 				582EDCB01F35565500823C50 /* HoleScore.swift in Sources */,
-				582874A31F410989008D2460 /* RoundTableViewCell.swift in Sources */,
 				586060801F34214C00734EF7 /* ViewController.swift in Sources */,
 				582EDCAA1F3552D600823C50 /* Hole.swift in Sources */,
 				582EDCAE1F3555D200823C50 /* Course.swift in Sources */,
