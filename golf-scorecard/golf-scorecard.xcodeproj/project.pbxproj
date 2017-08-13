@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5826EFF01F342E0300D5059F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
 		5826EFF11F3435D500D5059F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586060D41F3423AC00734EF7 /* Round.swift */; };
+		5828749F1F410707008D2460 /* HoleScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5828749E1F410707008D2460 /* HoleScoreTableViewCell.swift */; };
 		582EDCAA1F3552D600823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
 		582EDCAB1F3552D700823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
 		582EDCAC1F3552DD00823C50 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582EDCA81F3552CD00823C50 /* Hole.swift */; };
@@ -92,6 +93,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5828749E1F410707008D2460 /* HoleScoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleScoreTableViewCell.swift; sourceTree = "<group>"; };
 		582EDCA81F3552CD00823C50 /* Hole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hole.swift; path = "golf-scorecard/Hole.swift"; sourceTree = SOURCE_ROOT; };
 		582EDCAD1F3555D200823C50 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		582EDCAF1F35565500823C50 /* HoleScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleScore.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				586060891F34214C00734EF7 /* Info.plist */,
 				582EDCAD1F3555D200823C50 /* Course.swift */,
 				582EDCAF1F35565500823C50 /* HoleScore.swift */,
+				5828749E1F410707008D2460 /* HoleScoreTableViewCell.swift */,
 			);
 			path = "golf-scorecard";
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				582EDCAE1F3555D200823C50 /* Course.swift in Sources */,
 				586060D51F3423AC00734EF7 /* Round.swift in Sources */,
 				5860607E1F34214C00734EF7 /* AppDelegate.swift in Sources */,
+				5828749F1F410707008D2460 /* HoleScoreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
