@@ -19,8 +19,8 @@ class RoundTableViewCell: UITableViewCell {
     @IBOutlet var score: UILabel!
 
     func setRound(round: Round) {
-        name.setText(round.name)
-        score.setText("\(round.totalScore())")
+        name.text = round.name
+        score.text = "\(round.totalScore())"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
