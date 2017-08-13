@@ -97,6 +97,11 @@
                                 <action selector="newRound" destination="M14-bF-zCt" id="Xwl-jH-oYV"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Save to Phone" id="Wea-Yu-Ctw">
+                            <connections>
+                                <action selector="saveRound" destination="M14-bF-zCt" id="zdi-r7-elw"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="roundSummaryTable" destination="oow-WE-Lrc" id="oYX-Is-MYN"/>

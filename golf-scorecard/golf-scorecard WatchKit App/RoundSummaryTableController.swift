@@ -21,6 +21,12 @@ class RoundSummaryTableController: WKInterfaceController {
         setRound(round: round)
     }
     
+    @IBAction func saveRound() {
+        if let round = round {
+            
+        }
+    }
+    
     @IBAction func newRound() {
         if let round = round {
             round.reset()
