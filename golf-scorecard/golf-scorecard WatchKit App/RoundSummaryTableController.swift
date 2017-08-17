@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import WatchConnectivity
 
 class RoundSummaryTableController: WKInterfaceController {
     
@@ -19,6 +20,15 @@ class RoundSummaryTableController: WKInterfaceController {
             return
         }
         setRound(round: round)
+    }
+    
+    var session: WCSession? {
+        didSet {
+            if let session = session {
+                session.delegate = self
+                session.activateSession()
+            }
+        }
     }
     
     @IBAction func saveRound() {
