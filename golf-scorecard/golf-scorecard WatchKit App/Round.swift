@@ -13,7 +13,6 @@ class Round {
     var holes: Int
     var scoreCard: [HoleScore]
     var hole: Int
-    var startTime: Date
     
     init(holes: Int) {
         self.holes = holes
@@ -22,7 +21,6 @@ class Round {
             self.scoreCard += [HoleScore(hole: Hole(number: holeIndex + 1, name: "Hole \(holeIndex + 1)"))]
         }
         self.hole = 0
-        startTime = Date()
     }
     
     func reset() {
