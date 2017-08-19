@@ -13,7 +13,6 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        WCSession.default().delegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,15 +48,10 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if let round = self.round {
-            return round.holes
-        }
-        else {
-            return 0
-        }
+        return round.holes
     }
     
-    var round: Round?
+    var round = Round(holes: 18)
     
     func setRound(round: Round) {
         self.round = round
@@ -65,10 +59,8 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HoleScoreCellReuseIdentifier", for: indexPath) as! HoleScoreTableViewCell
-        if let round = self.round {
-            cell.name.text = round.scoreCard[indexPath.endIndex].hole.name
-            cell.score.text = "\(round.scoreCard[indexPath.endIndex].hole.number)"
-        }
+        cell.name.text = round.scoreCard[indexPath.row].hole.name
+        cell.score.text = "\(round.scoreCard[indexPath.row].totalStrokes())"
         return cell
     }
 

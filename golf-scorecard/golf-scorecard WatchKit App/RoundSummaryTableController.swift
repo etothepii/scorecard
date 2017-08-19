@@ -28,8 +28,8 @@ class RoundSummaryTableController: WKInterfaceController {
             do {
                 try session.updateApplicationContext(["round":round])
             }
-            catch _ {
-            
+            catch {
+                let a = 2
             }
         }
     }
