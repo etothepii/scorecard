@@ -14,6 +14,15 @@ class Round {
     var scoreCard: [HoleScore]
     var hole: Int
     
+    init(dictionary: [String: Any]) {
+        self.holes = dictionary["holes"] as! Int
+        self.hole = dictionary["hole"] as! Int
+        self.scoreCard = [HoleScore]()
+        for scoreCardDictionary in (dictionary["scoreCard"] as! [Any]) {
+            self.scoreCard += [HoleScore(dictionary: scoreCardDictionary as! [String: Any])]
+        }
+    }
+    
     init(holes: Int) {
         self.holes = holes
         self.scoreCard = [HoleScore]()
@@ -87,8 +96,8 @@ class Round {
     
     func toDictionary() -> [String: Any] {
         var scoreCardArray = [[String: Any]]()
-        for (index, score) in scoreCard.enumerated() {
-            scoreCardArray[index] = score.toDictionary()
+        for score in scoreCard {
+            scoreCardArray += [score.toDictionary()]
         }
         return ["hole": hole,
         "holes": holes,

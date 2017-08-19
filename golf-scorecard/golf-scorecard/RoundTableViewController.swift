@@ -14,6 +14,7 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         WCSession.default().delegate = self
+        WCSession.default().activate()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,6 +28,7 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
     }
 
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
@@ -36,19 +38,17 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        if let round = applicationContext["round"] as? Round {
-            setRound(round: round)
+        if let round = applicationContext["round"] as? [String: Any] {
+            setRound(round: Round(dictionary: round))
         }
     }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return round.holes
     }
     
@@ -56,8 +56,14 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
     
     func setRound(round: Round) {
         self.round = round
+        self.tableView.reloadData()
+        self.tableView.setNeedsDisplay()
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "  "
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HoleScoreCellReuseIdentifier", for: indexPath) as! HoleScoreTableViewCell
         cell.name.text = round.scoreCard[indexPath.row].hole.name

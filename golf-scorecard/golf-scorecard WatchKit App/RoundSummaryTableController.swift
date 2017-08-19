@@ -34,7 +34,7 @@ class RoundSummaryTableController: WKInterfaceController, WCSessionDelegate {
         if let round = round, WCSession.isSupported() {
             let session = WCSession.default()
             do {
-                try session.updateApplicationContext(["round":round])
+                try session.updateApplicationContext(["round":round.toDictionary()])
             }
             catch {
             }
