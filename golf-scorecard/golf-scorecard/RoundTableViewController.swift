@@ -66,8 +66,7 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HoleScoreCellReuseIdentifier", for: indexPath) as! HoleScoreTableViewCell
-        cell.name.text = round.scoreCard[indexPath.row].hole.name
-        cell.score.text = "\(round.scoreCard[indexPath.row].totalStrokes())"
+        cell.setHoleScore(holeScore: round.scoreCard[indexPath.row])
         return cell
     }
 

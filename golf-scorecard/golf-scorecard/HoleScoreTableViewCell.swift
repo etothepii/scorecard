@@ -17,10 +17,14 @@ class HoleScoreTableViewCell: UITableViewCell {
 
     @IBOutlet var score: UILabel!
     @IBOutlet var name: UILabel!
+    @IBOutlet var throughGreen: UILabel!
+    @IBOutlet var onGreen: UILabel!
     
     func setHoleScore(holeScore: HoleScore) {
         name.text = holeScore.hole.name
         score.text = "\(holeScore.totalStrokes())"
+        throughGreen.text = "\(holeScore.strokesToGreen)"
+        onGreen.text = "\(holeScore.strokesOnGreen)"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
