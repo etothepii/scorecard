@@ -9,13 +9,21 @@
 import WatchKit
 import WatchConnectivity
 
-class RoundSummaryTableController: WKInterfaceController {
+class RoundSummaryTableController: WKInterfaceController, WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        self.session = session
+    }
     
     @IBOutlet var roundSummaryTable: WKInterfaceTable!
     var round: Round?
     
+    var session: WCSession?
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        WCSession.default().delegate = self
+        WCSession.default().activate()
         guard let round = context as? Round else {
             return
         }
