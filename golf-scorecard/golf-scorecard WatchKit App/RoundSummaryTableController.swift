@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import WatchConnectivity
 
 class RoundSummaryTableController: WKInterfaceController {
     
@@ -22,8 +23,14 @@ class RoundSummaryTableController: WKInterfaceController {
     }
     
     @IBAction func saveRound() {
-        if let round = round {
+        if let round = round, WCSession.isSupported() {
+            let session = WCSession.default()
+            do {
+                try session.updateApplicationContext(["round":round])
+            }
+            catch _ {
             
+            }
         }
     }
     
