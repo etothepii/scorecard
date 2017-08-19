@@ -24,6 +24,14 @@ class HoleScore {
         self.completed = false
     }
     
+    init(dictionary: [String: Any]) {
+        self.hole = Hole(dictionary: dictionary["hole"] as! [String:Any])
+        self.strokesOnGreen = dictionary["strokesOnGreen"] as! Int
+        self.strokesToGreen = dictionary["strokesToGreen"] as! Int
+        self.landedOnGreen = dictionary["landedOnGreen"] as! Bool
+        self.completed = dictionary["completed"] as! Bool
+    }
+    
     func totalStrokes() -> Int {
         return strokesOnGreen + strokesToGreen
     }
@@ -58,6 +66,14 @@ class HoleScore {
     
     func landOnGreen() {
         landedOnGreen = true
+    }
+    
+    func toDictionary() -> [String: Any] {
+        return ["hole": hole.toDictionary(),
+                "strokesToGreen":strokesToGreen,
+                "strokesOnGreen":strokesOnGreen,
+                "landedOnGreen": landedOnGreen,
+                "completed": completed]
     }
 
 }

@@ -85,4 +85,14 @@ class Round {
         return total
     }
     
+    func toDictionary() -> [String: Any] {
+        var scoreCardArray = [[String: Any]]()
+        for (index, score) in scoreCard.enumerated() {
+            scoreCardArray[index] = score.toDictionary()
+        }
+        return ["hole": hole,
+        "holes": holes,
+        "scoreCard": scoreCardArray]
+    }
+    
 }

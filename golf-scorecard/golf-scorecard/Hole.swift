@@ -18,4 +18,13 @@ class Hole {
         self.name = name
     }
     
+    func toDictionary() -> [String: Any] {
+        return ["number":number,"name":name]
+    }
+    
+    init(dictionary: [String: Any]) {
+        self.number = dictionary["number"] as! Int
+        self.name = dictionary["name"] as! String
+    }
+    
 }
