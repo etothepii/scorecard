@@ -22,8 +22,10 @@ class RoundSummaryTableController: WKInterfaceController, WCSessionDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        WCSession.default().delegate = self
-        WCSession.default().activate()
+        DispatchQueue.global(qos: .background).async {
+            WCSession.default().delegate = self
+            WCSession.default().activate()
+        }
         guard let round = context as? Round else {
             return
         }

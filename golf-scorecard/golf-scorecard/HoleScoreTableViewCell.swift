@@ -27,6 +27,15 @@ class HoleScoreTableViewCell: UITableViewCell {
         onGreen.text = "\(holeScore.strokesOnGreen)"
     }
     
+    func set(isTotal: Bool) {
+        if (isTotal) {
+            self.backgroundColor = UIColor.lightGray
+        }
+        else {
+            self.backgroundColor = UIColor.white
+        }
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -13,8 +13,10 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        WCSession.default().delegate = self
-        WCSession.default().activate()
+        DispatchQueue.global(qos: .background).async {
+            WCSession.default().delegate = self
+            WCSession.default().activate()
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,7 +51,7 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return round.holes
+        return round.holes + 1
     }
     
     var round = Round(holes: 18)
@@ -66,7 +68,18 @@ class RoundTableViewController: UITableViewController, WCSessionDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HoleScoreCellReuseIdentifier", for: indexPath) as! HoleScoreTableViewCell
-        cell.setHoleScore(holeScore: round.scoreCard[indexPath.row])
+        var holeScore: HoleScore? = nil
+        if (indexPath.row == 0) {
+            holeScore = HoleScore(hole: Hole(number: 0, name: "Total"))
+            holeScore!.strokesOnGreen = round.totalOnGreen()
+            holeScore!.strokesToGreen = round.totalToGreen()
+            cell.set(isTotal: true)
+        }
+        else {
+            holeScore = round.scoreCard[indexPath.row - 1]
+            cell.set(isTotal: false)
+        }
+        cell.setHoleScore(holeScore: holeScore!)
         return cell
     }
 

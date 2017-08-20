@@ -94,6 +94,22 @@ class Round {
         return total
     }
     
+    func totalToGreen() -> Int {
+        var total: Int = 0
+        for score in self.scoreCard {
+            total += score.strokesToGreen
+        }
+        return total
+    }
+    
+    func totalOnGreen() -> Int {
+        var total: Int = 0
+        for score in self.scoreCard {
+            total += score.strokesOnGreen
+        }
+        return total
+    }
+    
     func toDictionary() -> [String: Any] {
         var scoreCardArray = [[String: Any]]()
         for score in scoreCard {
